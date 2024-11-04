@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { Button } from './ui/button'
 import { useState, useEffect } from 'react'
+import React from 'react'
 
 export default function Header() {
   const router = useRouter()

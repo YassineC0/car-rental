@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import React from 'react'
 
 export default function Hero3D() {
   return (
@@ -35,7 +36,7 @@ export default function Hero3D() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          Whether you're planning a weekend getaway, a business trip, or just need a reliable ride
+          Whether you&apos;re planning a weekend getaway, a business trip, or just need a reliable ride
           for the day, we offer a wide range of vehicles to suit your needs.
         </motion.p>
       </div>

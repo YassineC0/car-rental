@@ -1,3 +1,4 @@
+import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from './ui/button'
@@ -95,15 +96,15 @@ export default function About() {
               </div>
             </div>
 
-            <div className="pt-10">
-            <Link href="/contact">
-              <Button className="bg-primary text-white hover:bg-primary/90">
-                Contact Us <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
+            <div className="pt-8">
+              <Link href="/contact">
+                <Button className="bg-primary text-white hover:bg-primary/90">
+                  Contact Us <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </section>
   )

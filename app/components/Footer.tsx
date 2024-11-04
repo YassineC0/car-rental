@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { Facebook, Twitter, Youtube, Instagram, Linkedin, ArrowRight } from 'lucide-react'
+import React from 'react'
 
 export default function Footer() {
   return (

@@ -2,6 +2,7 @@
 
 import { Star } from 'lucide-react'
 import { Button } from './ui/button'
+import React from 'react'
 
 export default function Testimonials() {
   return (

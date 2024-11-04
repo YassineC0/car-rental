@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 
+
 export async function GET() {
   // Your logic to get bookings
   return NextResponse.json({ message: 'Get bookings' })
@@ -16,8 +17,8 @@ export async function PUT(request: Request) {
   const body = await request.json()
   return NextResponse.json({ message: 'Booking updated', data: body })
 }
-
+/*
 export async function DELETE(request: Request) {
   // Your logic to delete a booking
   return NextResponse.json({ message: 'Booking deleted' })
-}
+}*/

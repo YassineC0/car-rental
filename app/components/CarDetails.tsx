@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { Button } from './ui/button'
 import { ArrowRight, MessageCircle, Plus, Minus, Check } from 'lucide-react'
+import React from 'react'
 
 interface Car {
   id: number

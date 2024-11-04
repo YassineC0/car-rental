@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import React from 'react'
 import { Car, MapPin, UserCheck, Shield } from 'lucide-react'
 
 export default function WhyChooseUs() {

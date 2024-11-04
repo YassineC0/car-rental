@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Header from '../components/Header'
+import React from 'react'
 
 
 export default function AboutPage() {
@@ -17,7 +18,7 @@ export default function AboutPage() {
               <p className="text-gray-600">
                 Founded in 2010, CarRental has been providing top-notch car rental services for over a decade. 
                 Our mission is to offer convenient, reliable, and affordable transportation solutions to our customers. 
-                With a diverse fleet of vehicles and a commitment to exceptional customer service, we've become a 
+                With a diverse fleet of vehicles and a commitment to exceptional customer service, we&apos;ve become a 
                 trusted name in the car rental industry.
               </p>
             </div>
@@ -30,7 +31,7 @@ export default function AboutPage() {
             <div className="md:w-1/2 md:pl-8 mb-8 md:mb-0">
               <h2 className="text-2xl font-semibold mb-4">Our Commitment</h2>
               <p className="text-gray-600">
-                At CarRental, we're committed to providing an exceptional experience for every customer. 
+                At CarRental, we&apos;re committed to providing an exceptional experience for every customer. 
                 We continuously invest in our fleet, ensuring that our vehicles are well-maintained, clean, 
                 and equipped with the latest features. Our team of dedicated professionals is always ready 
                 to assist you, whether you need help choosing the right vehicle or require roadside assistance.
@@ -46,9 +47,9 @@ export default function AboutPage() {
               <h2 className="text-2xl font-semibold mb-4">Our Future</h2>
               <p className="text-gray-600">
                 As we look to the future, CarRental is committed to embracing innovation and sustainability. 
-                We're expanding our fleet to include more electric and hybrid vehicles, reducing our environmental 
+                We&apos;re expanding our fleet to include more electric and hybrid vehicles, reducing our environmental 
                 impact while providing our customers with cutting-edge transportation options. Our goal is to 
-                continue growing and evolving, always putting our customers' needs first.
+                continue growing and evolving, always putting our customers&apos; needs first.
               </p>
             </div>
             <div className="md:w-1/2">

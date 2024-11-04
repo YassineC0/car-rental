@@ -1,11 +1,11 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+
 import { Button } from './ui/button'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import CarCard from './CarCard'
+import React from 'react'
 
 export const cars = [
   {
@@ -79,7 +79,7 @@ export default function CarListing() {
         <div className="relative">
           <div className="flex overflow-hidden">
             {cars.map((car, index) => (
-              <CarCard car={car} startIndex={startIndex} key={car.id}></CarCard>
+              <CarCard car={car} startIndex={startIndex} key={index}></CarCard>
             ))}
           </div>
           <Button

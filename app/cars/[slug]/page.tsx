@@ -5,6 +5,7 @@ import { cars } from '../../components/CarListing'
 import CarDetails from '../../components/CarDetails'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import React from 'react'
 
 export default function CarPage() {
   const params = useParams()
