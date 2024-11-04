@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { Button } from './ui/button'
 import { ArrowRight } from 'lucide-react'
 
@@ -94,11 +95,15 @@ export default function About() {
               </div>
             </div>
 
-            <Button className="bg-primary text-white hover:bg-primary/90">
-              Contact Us <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <div className="pt-10">
+            <Link href="/contact">
+              <Button className="bg-primary text-white hover:bg-primary/90">
+                Contact Us <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
+      </div>
       </div>
     </section>
   )
