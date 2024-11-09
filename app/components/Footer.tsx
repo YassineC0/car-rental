@@ -12,8 +12,8 @@ export default function Footer() {
           {/* Brand Section */}
           <div>
             <Link href="/" className="text-2xl font-bold">
-              <span className="text-white">NOVA</span>
-              <span className="text-orange-500">RIDE</span>
+              <span className="text-white">YASSINE</span>
+              <span className="text-red-500">RIDE</span>
             </Link>
             <p className="mt-4 text-gray-400">
               Experience the ease and convenience of renting a car with Novaride.
@@ -51,7 +51,7 @@ export default function Footer() {
                 placeholder="Email..."
                 className="bg-gray-800 border-gray-700 text-white"
               />
-              <Button className="bg-orange-500 hover:bg-orange-600">
+              <Button className="bg-red-500 hover:bg-red-600">
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </div>

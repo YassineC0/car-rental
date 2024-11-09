@@ -8,11 +8,14 @@ import React from 'react'
 
 export default function Header() {
   const router = useRouter()
-  const [scrolled, setScrolled] = useState(false)
+  const [scrollProgress, setScrollProgress] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
+      const totalScroll = document.documentElement.scrollHeight - window.innerHeight
+      const currentScroll = window.scrollY
+      const progress = (currentScroll / totalScroll) * 100
+      setScrollProgress(Math.min(progress, 100))
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -31,20 +34,23 @@ export default function Header() {
     { name: 'Contact Us', href: '/contact' }
   ]
 
+  const backgroundColor = `rgba(0, 0, 0, ${0.3 + (scrollProgress / 100) * 0.5})`
+
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white shadow-md' : 'bg-gradient-to-b from-black/50 to-transparent'
-    }`}>
+    <header 
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      style={{ backgroundColor }}
+    >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className={`text-2xl font-bold ${scrolled ? 'text-black' : 'text-white'}`}>
-          NOVARIDE
+        <Link href="/" className="text-2xl font-bold text-white">
+          YASSINERIDE
         </Link>
         <nav className="hidden md:flex space-x-4">
           {navItems.map((item) => (
             <Link 
               key={item.name} 
               href={item.href}
-              className={`hover:text-orange-500 ${scrolled ? 'text-black' : 'text-white'}`}
+              className="text-white hover:text-orange-500 transition-colors duration-300"
             >
               {item.name}
             </Link>
@@ -52,7 +58,7 @@ export default function Header() {
         </nav>
         <Button
           onClick={handleBookRental}
-          className="bg-orange-500 text-white hover:bg-orange-600 px-4 py-2 rounded cursor-pointer"
+          className="bg-red-500 text-white hover:bg-orange-600 px-4 py-2 rounded cursor-pointer transition-colors duration-300"
         >
           Book A Rental
         </Button>

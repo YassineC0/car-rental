@@ -3,13 +3,14 @@
 import { Star } from 'lucide-react'
 import { Button } from './ui/button'
 import React from 'react'
+import Image from 'next/image'
 
 export default function Testimonials() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-black text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <span className="text-orange-500 font-semibold">✱ Testimonials</span>
+          <span className="text-red-500 font-semibold">✱ Testimonials</span>
           <h2 className="text-4xl font-bold mt-2">
             What our customers are saying about us
           </h2>
@@ -19,7 +20,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2"
+              className="bg-gray-900 p-6 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2"
             >
               <div className="flex mb-4">
                 {[...Array(5)].map((_, i) => (
@@ -27,22 +28,24 @@ export default function Testimonials() {
                     key={i}
                     className={`w-5 h-5 ${
                       i < testimonial.rating
-                        ? 'text-orange-500 fill-orange-500'
-                        : 'text-gray-300 fill-gray-300'
+                        ? 'text-red-500 fill-red-500'
+                        : 'text-gray-600 fill-gray-600'
                     }`}
                   />
                 ))}
               </div>
-              <p className="text-gray-600 mb-6">{testimonial.text}</p>
+              <p className="text-gray-300 mb-6">{testimonial.text}</p>
               <div className="flex items-center">
-                <img
+                <Image
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full mr-4"
+                  width={48}
+                  height={48}
+                  className="rounded-full mr-4"
                 />
                 <div>
                   <h4 className="font-semibold">{testimonial.name}</h4>
-                  <p className="text-gray-500 text-sm">{testimonial.role}</p>
+                  <p className="text-gray-400 text-sm">{testimonial.role}</p>
                 </div>
               </div>
             </div>
@@ -52,13 +55,13 @@ export default function Testimonials() {
         <div className="flex justify-center mt-8 gap-4">
           <Button
             variant="outline"
-            className="rounded-full bg-orange-500 text-white hover:bg-orange-600"
+            className="rounded-full bg-red-600 text-white hover:bg-red-700 border-red-600"
           >
             Previous
           </Button>
           <Button
             variant="outline"
-            className="rounded-full bg-orange-500 text-white hover:bg-orange-600"
+            className="rounded-full bg-red-600 text-white hover:bg-red-700 border-red-600"
           >
             Next
           </Button>
